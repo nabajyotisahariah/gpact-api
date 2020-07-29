@@ -1,0 +1,30 @@
+Api Endpoints
+            -> Java Spring application will be run on the port 9090
+            -> Run JUnit Test for populate different data
+            -> http://localhost:9090/library/getall - [GET] Return all the library along with books
+            -> http://localhost:9090/library/getbooks  - [GET] Return Books with library info
+            -> http://localhost:9090/library/book/1 - [GET] Particular Library Info id wise
+            -> http://localhost:9090/library/book/edit - [POST] Edit a Book
+                        Form Data
+                                id        : 2
+                                name   : Science Book V2
+                                sclass : II
+              -> http://localhost:9090/library/book/delete - [POST] Delete a Book
+                         Form Data
+                                 id     : 2
+
+Database::
+             SELECT * FROM genpactdb.tm_book
+
+             "id" "created_on" "modified_on" "name" "sclass" "library_id"
+              "1" "2020-07-17 15:45:27" "2020-07-17 15:45:27" "English VII" "I" "1"
+              "3" "2020-07-17 15:54:25" "2020-07-17 15:54:25" "Hindi Book for I" "I" "2"
+              "4" "2020-07-17 15:54:25" "2020-07-17 15:54:25" "English Book For I" "I" "2"
+              "5" "2020-07-17 15:54:25" "2020-07-17 15:54:25" "Maths Book for II" "II" "3"
+              "6" "2020-07-17 15:54:25" "2020-07-17 15:54:25" "Science Book For II" "II" "3"
+
+             SELECT * FROM genpactdb.tm_library
+             "id" "created_on" "modified_on" "name"
+             "1" "2020-07-17 15:45:27" "2020-07-17 15:45:27" "Library VIII"
+             "2" "2020-07-17 15:54:25" "2020-07-17 15:54:25" "Library I"
+             "3" "2020-07-17 15:54:25" "2020-07-17 15:54:25" "Library 2"
