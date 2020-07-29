@@ -1,0 +1,58 @@
+/*
+SQLyog Ultimate v8.61 
+MySQL - 5.6.21 : Database - db_example
+*********************************************************************
+*/
+
+
+/*!40101 SET NAMES utf8 */;
+
+/*!40101 SET SQL_MODE=''*/;
+
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/`db_example` /*!40100 DEFAULT CHARACTER SET latin1 */;
+
+USE `db_example`;
+
+/*Table structure for table `tm_book` */
+
+DROP TABLE IF EXISTS `tm_book`;
+
+CREATE TABLE `tm_book` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `created_on` datetime DEFAULT NULL,
+  `modified_on` datetime DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `sclass` varchar(255) DEFAULT NULL,
+  `library_id` bigint(20) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FK8kt3j1s8fk9bumpfqdd3sodpn` (`library_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
+
+/*Data for the table `tm_book` */
+
+insert  into `tm_book`(`id`,`created_on`,`modified_on`,`name`,`sclass`,`library_id`) values (1,'2020-07-17 10:12:49','2020-07-17 10:12:49','English','I',NULL),(2,NULL,'2020-07-17 12:16:48','XYZC','ABCI',NULL),(3,'2020-07-17 10:14:03','2020-07-17 10:14:03','English','I',2),(4,'2020-07-17 10:14:03','2020-07-17 10:14:03','Hindi','I',2),(5,'2020-07-17 10:14:41','2020-07-17 10:14:41','Hindi','I',3),(6,'2020-07-17 10:14:41','2020-07-17 10:14:41','English','I',3),(7,'2020-07-17 10:17:10','2020-07-17 10:17:10','Hindi','I',4),(8,'2020-07-17 10:17:10','2020-07-17 10:17:10','English','I',4),(9,'2020-07-17 10:45:40','2020-07-17 10:45:40','Hindi','I',5),(10,'2020-07-17 10:45:40','2020-07-17 10:45:40','English','I',5),(11,'2020-07-17 11:06:56','2020-07-17 11:06:56','Hindi','I',6),(12,'2020-07-17 11:06:56','2020-07-17 11:06:56','English','I',6),(13,'2020-07-17 11:40:59','2020-07-17 11:40:59','English','I',7),(14,'2020-07-17 11:40:59','2020-07-17 11:40:59','Hindi','I',7),(15,'2020-07-17 12:04:02','2020-07-17 12:04:02','English VII','I',8),(16,'2020-07-17 12:04:02','2020-07-17 12:04:02','Hindi VII','I',8),(17,'2020-07-17 12:05:10','2020-07-17 12:05:10','English VII','I',9),(18,'2020-07-17 12:05:10','2020-07-17 12:05:10','Hindi VII','I',9);
+
+/*Table structure for table `tm_library` */
+
+DROP TABLE IF EXISTS `tm_library`;
+
+CREATE TABLE `tm_library` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `created_on` datetime DEFAULT NULL,
+  `modified_on` datetime DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+
+/*Data for the table `tm_library` */
+
+insert  into `tm_library`(`id`,`created_on`,`modified_on`,`name`) values (1,'2020-07-17 10:12:49','2020-07-17 10:12:49','Library II'),(2,'2020-07-17 10:14:03','2020-07-17 10:14:03','Library III'),(3,'2020-07-17 10:14:41','2020-07-17 10:14:41','Library III'),(4,'2020-07-17 10:17:10','2020-07-17 10:17:10','Library IV'),(5,'2020-07-17 10:45:40','2020-07-17 10:45:40','Library V'),(6,'2020-07-17 11:06:56','2020-07-17 11:06:56','Library V'),(7,'2020-07-17 11:40:59','2020-07-17 11:40:59','Library VI'),(8,'2020-07-17 12:04:02','2020-07-17 12:04:02','Library VII'),(9,'2020-07-17 12:05:10','2020-07-17 12:05:10','Library VIII');
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
