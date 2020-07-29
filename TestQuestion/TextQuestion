@@ -1,0 +1,27 @@
+Use case details for full-stack and backend developer*:
+
+Develop the following use case before coming for the discussion:
+
+Create a Library Object and a Book object in JPA
+Write a program which exposes read/write/update API for creating a book object in a in memory database like .h2. use JPA for writing to DB
+One API to get all the books for a Library
+API to update one Book details into DB
+Write test cases Unit + integration
+Should be Maven based running project
+
+One simple React or angular JS page which displays list libraries
+Click on libraries and show the books
+Write test case to test the components
+
+Use best possible design principles 
+Should be able to modify the use case to showcase generally used design patterns during the discussion 
+Document code to appropriately describe the design choices
+
+
+The code needs to be uploaded to github and the link needs to be shared for the discussion.  The code should be in proper working condition during the discussion. Use HTTP verbs.  
+
+During the discussion, the above use case will be reviewed and discussed. An enhancement would be asked to be made and unit testing would have to be done for the enhancement.  In addition to this, regular technical questions would be asked. 
+
+The candidate has to ensure that the video is on during the discussion. 
+
+*backend developer can skip steps 7 to 9 
